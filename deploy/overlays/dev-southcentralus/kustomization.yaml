@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+bases:
+- ../../base
+
+patchesJson6902:
+  - target:
+      kind: Application
+      name: podinfo-workload
+    patch: |-
+      - op: replace
+        path: /metadata/name
+        value: podinfo-workload-dev-southcentralus
+      - op: replace
+        path: /spec/destination/server
+        value: "https://dev-southcentralus.vcluster-dev-southcentralus:443"
