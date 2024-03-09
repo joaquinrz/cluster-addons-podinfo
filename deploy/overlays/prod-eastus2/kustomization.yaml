@@ -11,7 +11,7 @@ patchesJson6902:
     patch: |-
       - op: replace
         path: /metadata/name
-        value: podinfo-workload-preprod-eastus
+        value: podinfo-workload-prod-eastus2
       - op: replace
         path: /spec/destination/server
-        value: "https://preprod-eastus.vcluster-preprod-eastus:443"
+        value: "https://aks-prod-e-fleet-f22d63-mt3jvar8.hcp.eastus2.azmk8s.io:443"
