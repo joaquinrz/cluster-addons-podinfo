@@ -11,7 +11,7 @@ patchesJson6902:
     patch: |-
       - op: replace
         path: /metadata/name
-        value: podinfo-workload-dev-westus2
+        value: podinfo-workload-preprod-westus2
       - op: replace
         path: /spec/destination/server
-        value: "https://dev-westus2.vcluster-dev-westus2:443"
+        value: "https://preprod-westus2.vcluster-preprod-westus2:443"
