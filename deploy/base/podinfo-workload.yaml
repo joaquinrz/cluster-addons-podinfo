@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: podinfo-workload
+  namespace: argocd
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: workload-infra
+  source:
+    repoURL: 'https://stefanprodan.github.io/podinfo'
+    targetRevision: "6.5.4"
+    chart: podinfo
+    helm:
+      parameters:
+        - name: serviceMonitor.enabled
+          value: "true"
+  destination:
+    server: "serverName"
+    namespace: podinfo
+  syncPolicy:
+    automated:
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+      - ServerSideApply=true
