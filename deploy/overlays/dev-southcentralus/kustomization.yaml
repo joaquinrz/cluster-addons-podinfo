@@ -17,15 +17,3 @@ patchesJson6902:
       - op: replace
         path: /spec/destination/server
         value: "https://dev-southcentralus.vcluster-dev-southcentralus:443"
-  # - target:
-  #     group: monitoring.coreos.com
-  #     version: v1
-  #     kind: ServiceMonitor
-  #     name: podinfo-workload
-  #   patch: |-
-  #     - op: replace
-  #       path: /metadata/name
-  #       value: podinfo-workload-dev-southcentralus
-  #     - op: replace
-  #       path: /spec/selector/matchLabels/name
-  #       value: podinfo-workload-dev-southcentralus

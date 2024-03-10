@@ -3,4 +3,3 @@ kind: Kustomization
 
 resources:
 - podinfo-workload.yaml
-# - service-monitor.yaml
