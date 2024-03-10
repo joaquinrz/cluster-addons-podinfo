@@ -13,6 +13,8 @@ spec:
     repoURL: 'https://stefanprodan.github.io/podinfo'
     targetRevision: "6.5.4"
     chart: podinfo
+    helm:
+      releaseName: podinfo-workload
   destination:
     server: "serverName"
     namespace: podinfo
