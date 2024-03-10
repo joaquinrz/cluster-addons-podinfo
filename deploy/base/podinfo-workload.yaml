@@ -13,12 +13,6 @@ spec:
     repoURL: 'https://stefanprodan.github.io/podinfo'
     targetRevision: "6.5.4"
     chart: podinfo
-    helm:
-      parameters:
-        - name: serviceMonitor.enabled
-          value: "true"
-        - name: serviceMonitor.additionalLabels.version
-          value: "6.5.4"       
   destination:
     server: "serverName"
     namespace: podinfo
