@@ -17,6 +17,9 @@ spec:
       parameters:
         - name: serviceMonitor.enabled
           value: "true"
+        - name: serviceMonitor.additionalLabels
+          value: |
+            version: "6.5.4"          
   destination:
     server: "serverName"
     namespace: podinfo
