@@ -14,9 +14,7 @@ spec:
     targetRevision: "6.5.4"
     chart: podinfo
     helm:
-      parameters:
-        - name: serviceMonitor.enabled
-          value: "true"
+      releaseName: podinfo
   destination:
     server: "serverName"
     namespace: podinfo
