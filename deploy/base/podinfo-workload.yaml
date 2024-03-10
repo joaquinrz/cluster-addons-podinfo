@@ -14,7 +14,7 @@ spec:
     targetRevision: "6.5.4"
     chart: podinfo
     helm:
-      releaseName: podinfo-workload
+      releaseName: podinfo
   destination:
     server: "serverName"
     namespace: podinfo
