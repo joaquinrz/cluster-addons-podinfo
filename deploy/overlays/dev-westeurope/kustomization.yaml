@@ -6,6 +6,8 @@ bases:
 
 patchesJson6902:
   - target:
+      group: argoproj.io
+      version: v1alpha1
       kind: Application
       name: podinfo-workload
     patch: |-
