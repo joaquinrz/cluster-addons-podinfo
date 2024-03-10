@@ -19,7 +19,7 @@ spec:
           value: "true"
         - name: serviceMonitor.additionalLabels
           value: |
-            version: "6.5.4"          
+            version: '{"version": "6.5.4"}'         
   destination:
     server: "serverName"
     namespace: podinfo
